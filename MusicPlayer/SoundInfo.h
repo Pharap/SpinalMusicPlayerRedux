@@ -50,7 +50,7 @@ public:
 		return this->sampleRate;
 	}
 
-	constexpr SoundRepeatInfo getRepeatInfo() const
+	constexpr const SoundRepeatInfo & getRepeatInfo() const
 	{
 		return this->repeatInfo;
 	}
