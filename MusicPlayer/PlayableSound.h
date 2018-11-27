@@ -73,9 +73,6 @@ unsigned char mixSounds(const PlayableSound (&samples)[size])
 		// Create a reference to the soundSettings to simplify the code
 		const SoundSettings & settings = sample.getSettings();
 
-		// Create a reference to the repeatInfo to simplify the code
-		const SoundRepeatInfo & repeatInfo = sample.getInfo().getRepeatInfo();
-
 		const std::size_t currentSoundIndex = ((playState.getPosition() * static_cast<std::size_t>(settings.getSpeed())) >> 8);
 		unsigned char data = static_cast<unsigned char>(static_cast<unsigned int>(sample.getInfo()[currentSoundIndex] * settings.getVolume()) >> 8);
 		
